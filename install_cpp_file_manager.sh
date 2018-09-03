@@ -3,15 +3,7 @@
 cd ~
 echo "Cpp File Manager for lab assignmets. Created by SaiKrishna."
 echo "NOTE: Copy all the downloaded files to the Home directory and then run this"
-echo "Enter yes or y  to install and no or n to abort"
-read Response1
-#Checks The response
-if [ $Response1=="no" ] || [ $Response1=="n" ] || [ $Response1=="N" ] || [ $Response1=="No" ] || [ $Response1=="NO" ]
-then
-	echo "Bye!!"
 
-elif [ $Response1=="yes" ] || [ $Response1=="y" ] || [ $Response1=="Y" ] || [ $Response1=="Yes" ] || [ $Response1=="YES" ]
-then
 	#checks for files
 	if [ -e ~/fileMaker.cpp ] && [ -e ~/findFile.sh ] && [ -e ~/openFile.sh ] && [ -e ~/runFile.sh ] && [ -e ~/transferFiles.sh ] && [ -e ~/uploadFile.sh ]
 	then
@@ -46,10 +38,10 @@ then
 		cd ~
 
 		# storing repository name		
-		touch ~/cpp_file_manager/repositorName.txt 
+		touch ~/cpp_file_manager/RepositorName.txt 
 		echo "Enter your repository name (case sensitive)"
 		read Response3
-		echo $Response2 >> ~/cpp_file_manager/repositorName.txt
+		echo $Response2 >> ~/cpp_file_manager/RepositoryName.txt
 		echo "Installation complete. If there were any errors refer readme or contact me (SaiKrishna)."
 		echo "Thanks for using Cpp File Manager"
 	else
@@ -57,10 +49,6 @@ then
 	fi
 
 
-else
-	echo "ERROR INVALID RESPONSE. TRY AGAIN!"
-
-fi
 	
 
 			
