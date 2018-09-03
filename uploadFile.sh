@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Cpp File Manager
 #RepositoryPath
 	# gets the temp name file's path
 	file="./cpp_file_manager/GitHub_repository.txt"

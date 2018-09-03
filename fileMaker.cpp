@@ -1,8 +1,6 @@
 /*
 * Auto-Generated File
-* Author 
-	Name	: SAI KRISHNA I
-	Roll No : 1811131
+* Created Using cpp_file_manager
 */
 
 // Importing Libraries
