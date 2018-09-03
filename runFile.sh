@@ -1,11 +1,12 @@
 #!/bin/bash
+cd ~
 # Cpp File Manager
 #creates Temporary name files
 touch ~/cpp_file_manager/FileName.txt
 touch ~/cpp_file_manager/FolderName.txt
 
 #finds the required file. runs a script
-sh ~/cpp_file_manager/findFile.sh
+bash ~/cpp_file_manager/findFile.sh
 
 
 #FileName

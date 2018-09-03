@@ -1,4 +1,5 @@
 #!/bin/bash
+cd ~
 # Cpp File Manager
 #RepositoryPath
 	# gets the temp name file's path
