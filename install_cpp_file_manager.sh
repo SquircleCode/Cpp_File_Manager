@@ -23,7 +23,7 @@ echo "NOTE: Copy all the downloaded files to the Home directory and then run thi
 		# For GitHub
 
 		# cloning repository
-		echo "Copy and Paste your GitHub Repository(empty)(refer readme) .link here (enter na to do it later) : "
+		echo "Copy and Paste your GitHub Repository(refer readme) link here (Enter 'na' to do it later) : "
 		read Response2		
 		
 		if [ ! $Response2 == "na" ]
@@ -41,7 +41,7 @@ echo "NOTE: Copy all the downloaded files to the Home directory and then run thi
 		touch ~/cpp_file_manager/RepositorName.txt 
 		echo "Enter your repository name (case sensitive)"
 		read Response3
-		echo $Response2 >> ~/cpp_file_manager/RepositoryName.txt
+		echo $Response3 >> ~/cpp_file_manager/RepositoryName.txt
 		echo "Installation complete. If there were any errors refer readme or contact me (SaiKrishna)."
 		echo "Thanks for using Cpp File Manager"
 	else

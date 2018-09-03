@@ -6,6 +6,7 @@ touch ~/cpp_file_manager/FileName.txt
 touch ~/cpp_file_manager/FolderName.txt
 
 #gets the repository name
+cd ~
 file="./cpp_file_manager/RepositoryName.txt"
 #reads and stores the value in a variable
 while IFS= read -r line
@@ -21,8 +22,8 @@ read Response
 if [ $Response == "file" ]
 then
 	#finds the required file. runs a script	
-	sh ~/cpp_file_manager/findFile.sh
-
+	bash ~/cpp_file_manager/findFile.sh
+	cd ~
 	#FileName
 	# gets the temp name file's path
 	file="./cpp_file_manager/FileName.txt"
@@ -34,6 +35,7 @@ then
 	done <"$file"
 
 	# gets the temp name file's path
+	cd ~
 	file="./cpp_file_manager/FolderName.txt"
 	#reads and stores the value in a variable
 	while IFS= read -r line
@@ -57,5 +59,6 @@ else
 	bash ~/cpp_file_manager/transferFiles.sh
 fi
 
+cd ~
 DESTINATION="./CS_141_GitHub/$RepositoryName"
 cp -r "$SOURCE"* "$DESTINATION"

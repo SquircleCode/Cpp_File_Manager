@@ -3,6 +3,7 @@ cd ~
 # Cpp File Manager
 #RepositoryPath
 	# gets the temp name file's path
+	cd ~
 	file="./cpp_file_manager/GitHub_repository.txt"
 	#reads and stores the value in a variable
 	while IFS= read -r line

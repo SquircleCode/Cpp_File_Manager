@@ -10,6 +10,7 @@ bash ~/cpp_file_manager/findFile.sh
 
 #FileName
 	# gets the temp name file's path
+	cd ~
 	file="./cpp_file_manager/FileName.txt"
 	#reads and stores the value in a variable
 	while IFS= read -r line
@@ -20,6 +21,7 @@ bash ~/cpp_file_manager/findFile.sh
 
 #FolderName
 	# gets the temp name file's path
+	cd ~
 	file="./cpp_file_manager/FolderName.txt"
 	#reads and stores the value in a variable
 	while IFS= read -r line
