@@ -4,7 +4,7 @@ echo "Cpp File Manager for lab assignmets. Created by SaiKrishna."
 echo "NOTE: Copy all the downloaded files to the Home directory and then run this"
 echo "Enter yes or y  to install and no or n to abort"
 read Response1
-if [ $Response1== "yes" || $Response1 == "y" || $Response1 == "Y" || $Response1 == "Yes" || $Response1 == "YES" ]
+if [ $Response1=="yes" || $Response1=="y" || $Response1=="Y" || $Response1=="Yes" || $Response1=="YES" ]
 then
 	#checks for files
 	if [ -e ~/fileMaker.cpp && -e ~/findFile.sh && -e ~/openFile.sh && -e ~/runFile.sh && -e ~/transferFiles.sh && -e ~/uploadFile.sh  ]
@@ -46,7 +46,7 @@ then
 	else
 		echo "ERROR - FILES MISSING: Please Download all the files and place them in the Home directory. Refer readme"
 	fi
-elif [ $Response1== "no" || $Response1 == "n" || $Response1 == "N" || $Response1 == "No" || $Response1 == "NO"]
+elif [ $Response1=="no" || $Response1=="n" || $Response1=="N" || $Response1=="No" || $Response1=="NO" ]
 then
 	echo "Bye!!0"
 else
