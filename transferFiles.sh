@@ -4,6 +4,15 @@
 touch ~/cpp_file_manager/FileName.txt
 touch ~/cpp_file_manager/FolderName.txt
 
+#gets the repository name
+file="./cpp_file_manager/RepositoryName.txt"
+#reads and stores the value in a variable
+while IFS= read -r line
+do
+       #stores the data into the variable
+	RepositoryName="$line"
+done <"$file"
+
 #File or folder
 echo "Do you want to transfer a file or a folder"
 read Response
@@ -44,8 +53,8 @@ then
 
 else
 	echo "Invalid Response. Try again"
-	uf
+	bash ~/cpp_file_manager/transferFiles.sh
 fi
 
-DESTINATION="./CS_141_GitHub/CS-141-SEM1"
+DESTINATION="./CS_141_GitHub/$RepositoryName"
 cp -r "$SOURCE"* "$DESTINATION"
