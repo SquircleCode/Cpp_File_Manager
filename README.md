@@ -13,12 +13,17 @@ use $ bash ~/install_cpp_file_manager.sh
 saikrishna.i@niser.ac.in
 
 # How to Use
-The usage is pretty simple. Just run the scripts
+The usage is pretty simple. 
+Just run the scripts
+
 The Scripts which are meant to be used are 
 1. openFile.sh 
 2. runFile.sh
 3. transferFiles.sh
 4. uploadFile.sh
-The remaining ones just do some background work. Feel Free to make any changes.
+
+The remaining ones just do some background work. 
+
+Feel Free to make any changes to any part of the program.
 
 
