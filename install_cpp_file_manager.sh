@@ -46,13 +46,14 @@ cd ~
 
 		echo "Installation complete. If there were any errors refer readme or contact me (SaiKrishna)."
 		echo "Thanks for using Cpp File Manager"
+		#Deletes the Installation files
+                rm ~/install_cpp_file_manager.sh
 	else
 		echo "ERROR - FILES MISSING: Please Download all the files and place them in the Home directory. Refer Readme."
 		echo "Thanks for trying to use Cpp File Manager"
 	fi
 
-#Deletes the Installation files
-rm ~/install_cpp_file_manager.sh
+
 	
 
 			
