@@ -1,43 +1,37 @@
 #!/bin/bash
-cd ~
-# Cpp File Manager
-#creates Temporary name files
-touch ~/cpp_file_manager/FileName.txt
-touch ~/cpp_file_manager/FolderName.txt
+#Cpp File Manager
 
-#finds the required file. runs a script
-bash ~/cpp_file_manager/findFile.sh
+cd ~
+#Creates temporary files to store names
+	touch ~/cpp_file_manager/FileName.txt
+	touch ~/cpp_file_manager/FolderName.txt
+
+#Finds the required file by runing the findFile script
+	bash ~/cpp_file_manager/findFile.sh
 
 #FileName
-	# gets the temp name file's path
-	cd ~
-	file="./cpp_file_manager/FileName.txt"
+	#gets the temp name file's path
+		file="./cpp_file_manager/FileName.txt"
 	#reads and stores the value in a variable
-	while IFS= read -r line
-	do
-	       #stores the data into the variable
-		FileName="$line"
-	done <"$file"
+		while IFS= read -r line
+		do
+		       #stores the data into the variable
+			FileName="$line"
+		done <"$file"
 
 #FolderName
 	# gets the temp name file's path
-	cd ~
-	file="./cpp_file_manager/FolderName.txt"
+		file="./cpp_file_manager/FolderName.txt"
 	#reads and stores the value in a variable
-	while IFS= read -r line
-	do
-	       #stores the data into the variable
-		FolderName="$line"
-	done <"$file"
+		while IFS= read -r line
+		do
+		       #stores the data into the variable
+			FolderName="$line"
+		done <"$file"
 
-#opens the file in the graphical editor
-gedit ~/$FolderName/$FileName.cpp
+#Opens the file in the graphical editor
+	gedit ~/$FolderName/$FileName.cpp
 
-#deletes the temporary name files
-rm ~/cpp_file_manager/FolderName.txt
-rm ~/cpp_file_manager/FileName.txt
-
-
-
-rm ~/cpp_file_manager/FileName.txt
-rm ~/cpp_file_manager/FolderName.txt
+#Deletes the temporary files
+	rm ~/cpp_file_manager/FolderName.txt
+	rm ~/cpp_file_manager/FileName.txt
