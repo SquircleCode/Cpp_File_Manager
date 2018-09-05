@@ -38,7 +38,7 @@ echo "NOTE: Copy all the downloaded files to the Home directory and then run thi
 		cd ~
 
 		# storing repository name		
-		touch ~/cpp_file_manager/RepositorName.txt 
+		touch ~/cpp_file_manager/RepositoryName.txt 
 		echo "Enter your repository name (case sensitive)"
 		read Response3
 		echo $Response3 >> ~/cpp_file_manager/RepositoryName.txt
