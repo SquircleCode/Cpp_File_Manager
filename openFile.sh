@@ -34,5 +34,10 @@ bash ~/cpp_file_manager/findFile.sh
 gedit ~/$FolderName/$FileName.cpp
 
 #deletes the temporary name files
+rm ~/cpp_file_manager/FolderName.txt
+rm ~/cpp_file_manager/FileName.txt
+
+
+
 rm ~/cpp_file_manager/FileName.txt
 rm ~/cpp_file_manager/FolderName.txt

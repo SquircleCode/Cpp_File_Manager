@@ -37,5 +37,7 @@ g++ ~/$FolderName/$FileName.cpp
 ~/a.out
 
 #deletes the temporary name files
+rm ~/cpp_file_manager/FolderName.txt
+rm ~/cpp_file_manager/FileName.txt
 rm ~/cpp_file_manager/FileName.txt
 rm ~/cpp_file_manager/FolderName.txt

@@ -60,5 +60,7 @@ else
 fi
 
 cd ~
+rm ~/cpp_file_manager/FolderName.txt
+rm ~/cpp_file_manager/FileName.txt
 DESTINATION="./CS_141_GitHub/$RepositoryName"
 cp -r "$SOURCE"* "$DESTINATION"
