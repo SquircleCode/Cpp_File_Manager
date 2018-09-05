@@ -1,5 +1,5 @@
 # Future Plans
-Trying to make a command line IDE. Please refer the Projects Section. Any help will be really appreciated
+Trying to make a command line IDE. Please refer the Projects Section. Any help is appreciated.
 
 
 # Cpp File Manager
