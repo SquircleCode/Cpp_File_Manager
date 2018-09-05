@@ -32,28 +32,36 @@ cd ~
 			then
 				touch  ~/cpp_file_manager/GitHub_repository.txt
 				echo $Response2 >> ~/cpp_file_manager/GitHub_repository.txt
+				mkdir CS_141_GitHub
+				cd ~/CS_141_GitHub
+				git clone $Response2
+				cd ~
+			#Stores the repository name for use in the future		
+				touch ~/cpp_file_manager/RepositoryName.txt 
+				echo "Enter your repository name (case sensitive)"
+				read Response3
+				echo $Response3 >> ~/cpp_file_manager/RepositoryName.txt
 			fi
-			mkdir CS_141_GitHub
-			cd ~/CS_141_GitHub
-			git clone $Response2
-			cd ~
+		
+		#Writes the aliases
+		echo 'Entering aliases into .bashrc...'
+		sleep 2
+		echo "alias op='bash ~/cpp_file_manager/openFile.sh'" >> ~/.bashrc
+		echo "alias rf='bash ~/cpp_file_manager/runFile.sh'" >> ~/.bashrc
+		echo "alias tf='bash ~/cpp_file_manager/transferFiles.sh'" >> ~/.bashrc
+		echo "alias up='bash ~/cpp_file_manager/uploadFile.sh'" >> ~/.bashrc
+		echo "aliases Updated."		
 
-		#Stores the repository name for use in the future		
-			touch ~/cpp_file_manager/RepositoryName.txt 
-			echo "Enter your repository name (case sensitive)"
-			read Response3
-			echo $Response3 >> ~/cpp_file_manager/RepositoryName.txt
-
-		echo "Installation complete. If there were any errors refer readme or contact me (SaiKrishna)."
+		echo "Installation complete.Restart Terminal to start using it. "
+		echo "If there were any errors refer readme or contact me (SaiKrishna)."
 		echo "Thanks for using Cpp File Manager"
-		#Deletes the Installation files
-                rm ~/install_cpp_file_manager.sh
 	else
 		echo "ERROR - FILES MISSING: Please Download all the files and place them in the Home directory. Refer Readme."
 		echo "Thanks for trying to use Cpp File Manager"
 	fi
 
-
+#Deletes the Installation files
+rm ~/install_cpp_file_manager.sh
 	
 
 			

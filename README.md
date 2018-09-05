@@ -1,7 +1,3 @@
-# Future Plans
-Trying to make a command line IDE. Please refer the Projects Section. Any help is appreciated.
-
-
 # Cpp File Manager
 
 A simple collection of scripts that saves time and does the boring stuff while doing lab assignments.
