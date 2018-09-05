@@ -23,8 +23,9 @@ Additionally : you can make these scripts into commands. Refer : https://www.hos
 
 # How to Use
 The usage is pretty simple. Just run the scripts
-Please run the scripts from the home directory. It does not work otherwise, I'm trying to fix it.
-The Scripts which are meant to be used are
+Please run the scripts using ' $ bash ' instead of ' $ sh 'from the home directory. It does not work otherwise as sh doesn't have complete permisions
+
+The Scripts which are meant to be used are :
 1. openFile.sh to open existing files or create new ones (Checks and does it automatically)
 2. runFile.sh to compile and run the file
 3. transferFiles.sh to transfer files to the local GitHub Clone ( transfers both individual files and entire folders based on the users choice)
