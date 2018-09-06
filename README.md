@@ -12,26 +12,26 @@ Feel Free to make any changes to any part of the program.
 5. Transfers and Uploads files to GitHub.
 
 # How To Install
-1. Download and extract the files
-2. Open the terminal and switch to directory where the files are extracted (or) just right click in that folder and open terminal
-3. Run the install_cpp_file_manager.sh using the bash command
-4. i.e $ bash install_cpp_file_manager.sh
-5. Follow the instructions and enter the necessary details
-6. After a successful installation
+1. Download all the files and move them to the Home Directory
+2. Run install_cpp_file_manager.sh using
+3. $ bash ~/install_cpp_file_manager.sh
+4. Read and follow the instructions which are prompted
+5. Copy your GitHub repository link and paste it when prompted
+6. Enter the repository name when prompted
+7. All done. Run the scripts from the home directory
+Additionally : you can make these scripts into commands. Refer : https://www.hostingadvice.com/how-to/set-command-aliases-linuxubuntudebian/
 
 # How to Use
-These are the commands which can be used.
-1. $ op
-2. $ rf
-3. $ tf
-4. $ up
+The usage is pretty simple. Just run the scripts
+Please run the scripts using ' $ bash ' instead of ' $ sh 'from the home directory. It does not work otherwise as sh doesn't have complete permisions
 
-What these commands do :
-1. $ op To open existing files or create new ones (Checks and does it automatically)
-2. $ rf To compile and run the file
-3. $ tf To transfer files to the local GitHub Clone ( transfers both individual files and entire folders based on the users choice)
-4. $ up To upload all the files present in the Local GitHub Repository to GitHub.
-
+The Scripts which are meant to be used are :
+1. openFile.sh to open existing files or create new ones (Checks and does it automatically)
+2. runFile.sh to compile and run the file
+3. transferFiles.sh to transfer files to the local GitHub Clone ( transfers both individual files and entire folders based on the users choice)
+4. uploadFile.sh to upload all the files present in the Local GitHub Repository to GitHub.
+5. fileMaker.cpp contains the default code that every new file has. Modify it according to your needs.
+6. The remaining ones just do some background work.
 
 For any other information e-mail me at saikrishna.i@niser.ac.in
 
