@@ -1,3 +1,6 @@
+# Future Plans
+To create a Command line IDE. Refer projects if you are interested. 
+
 # Cpp File Manager
 
 A simple collection of scripts that saves time and does the boring stuff while doing lab assignments. Please use it and give your feedback Feel Free to make any changes to any part of the program.
