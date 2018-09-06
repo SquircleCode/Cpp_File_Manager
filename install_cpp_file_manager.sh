@@ -1,67 +1,68 @@
 #!/bin/bash
 #Cpp File Manager
-
-cd ~
+pwd=$(pwd)	
+cd ~	
 #Instructions
 	echo "Cpp File Manager for lab assignmets. Created by SaiKrishna."
-	echo "NOTE: Copy all the downloaded files to the Home directory and then run this"
 	echo "Please refer the Readme.md for detailed instructions"
-	echo "Please wait..."
-	sleep 5
 
 #Checks if all the files exist in the home directory
-	if [ -e ~/fileMaker.cpp ] && [ -e ~/findFile.sh ] && [ -e ~/openFile.sh ] && [ -e ~/runFile.sh ] && [ -e ~/transferFiles.sh ] && [ -e ~/uploadFile.sh ]
+	if [ -e $pwd/fileMaker.cpp ] && [ -e $pwd/findFile.sh ] && [ -e $pwd/openFile.sh ] && [ -e $pwd/runFile.sh ] && [ -e $pwd/transferFiles.sh ] && [ -e $pwd/uploadFile.sh ]
 	then
+		echo "Please wait..."
+		sleep 4
 	#Creates the mother directory and transfers files		
-		mkdir cpp_file_manager
+		mkdir ~/.cpp_file_manager
 		echo "Transferring files..."
-		mv ~/fileMaker.cpp ~/cpp_file_manager/fileMaker.cpp
-		mv ~/findFile.sh ~/cpp_file_manager/findFile.sh
-		mv ~/openFile.sh ~/cpp_file_manager/openFile.sh
-		mv ~/runFile.sh ~/cpp_file_manager/runFile.sh
-		mv ~/transferFiles.sh ~/cpp_file_manager/transferFiles.sh
-		mv ~/uploadFile.sh ~/cpp_file_manager/uploadFile.sh
-		mv ~/README.md ~/cpp_file_manager/README.md
+		mv $pwd/fileMaker.cpp ~/.cpp_file_manager/fileMaker.cpp
+		mv $pwd/findFile.sh ~/.cpp_file_manager/findFile.sh
+		mv $pwd/openFile.sh ~/.cpp_file_manager/openFile.sh
+		mv $pwd/runFile.sh ~/.cpp_file_manager/runFile.sh
+		mv $pwd/transferFiles.sh ~/.cpp_file_manager/transferFiles.sh
+		mv $pwd/uploadFile.sh ~/.cpp_file_manager/uploadFile.sh
+		mv $pwd/README.md ~/.cpp_file_manager/README.md		
 		echo "Transfer Completed"
 		
 	#For GitHub
 		#Clones the GitHub Repository
-			echo "Copy and Paste your GitHub Repository(refer readme) link here (Enter 'na' to do it later) : "
+			echo "Copy and Paste your GitHub Repositorylink here (Enter 'na' to do it later) : "
 			read Response2			
 			if [ ! $Response2 == "na" ]
 			then
-				touch  ~/cpp_file_manager/GitHub_repository.txt
-				echo $Response2 >> ~/cpp_file_manager/GitHub_repository.txt
-				mkdir CS_141_GitHub
-				cd ~/CS_141_GitHub
+				touch  ~/.cpp_file_manager/GitHub_repository.txt
+				echo $Response2 >> ~/.cpp_file_manager/GitHub_repository.txt
+				mkdir ~/.CS_141_GitHub
+				cd ~/.CS_141_GitHub
 				git clone $Response2
 				cd ~
 			#Stores the repository name for use in the future		
-				touch ~/cpp_file_manager/RepositoryName.txt 
+				touch ~/.cpp_file_manager/RepositoryName.txt 
 				echo "Enter your repository name (case sensitive)"
 				read Response3
-				echo $Response3 >> ~/cpp_file_manager/RepositoryName.txt
+				echo $Response3 >> ~/.cpp_file_manager/RepositoryName.txt
 			fi
 		
 		#Writes the aliases
 		echo 'Entering aliases into .bashrc...'
-		sleep 2
-		echo "alias op='bash ~/cpp_file_manager/openFile.sh'" >> ~/.bashrc
-		echo "alias rf='bash ~/cpp_file_manager/runFile.sh'" >> ~/.bashrc
-		echo "alias tf='bash ~/cpp_file_manager/transferFiles.sh'" >> ~/.bashrc
-		echo "alias up='bash ~/cpp_file_manager/uploadFile.sh'" >> ~/.bashrc
+		#sleep 2
+		echo "alias op='bash ~/.cpp_file_manager/openFile.sh'" >> ~/.bashrc
+		echo "alias rf='bash ~/.cpp_file_manager/runFile.sh'" >> ~/.bashrc
+		echo "alias tf='bash ~/.cpp_file_manager/transferFiles.sh'" >> ~/.bashrc
+		echo "alias up='bash ~/.cpp_file_manager/uploadFile.sh'" >> ~/.bashrc
 		echo "aliases Updated."		
 
-		echo "Installation complete.Restart Terminal to start using it. "
+		echo "Installation complete. Restart Terminal to start using it."
 		echo "If there were any errors refer readme or contact me (SaiKrishna)."
+		sleep 3
 		echo "Thanks for using Cpp File Manager"
+		#deletes the installation file
+		rm $pwd/install_cpp_file_manager.sh	
 	else
-		echo "ERROR - FILES MISSING: Please Download all the files and place them in the Home directory. Refer Readme."
+		echo "ERROR - FILES MISSING: Please Download all the files. Refer Readme."
 		echo "Thanks for trying to use Cpp File Manager"
 	fi
 
-#Deletes the Installation files
-rm ~/install_cpp_file_manager.sh
+
 	
 
 			

@@ -3,11 +3,11 @@
 
 cd ~
 #Creates temporary files to store names
-	touch ~/cpp_file_manager/FileName.txt
-	touch ~/cpp_file_manager/FolderName.txt
+	touch ~/.cpp_file_manager/FileName.txt
+	touch ~/.cpp_file_manager/FolderName.txt
 
 #Gets the repository name. Reads and stores the value in a variable
-	file="./cpp_file_manager/RepositoryName.txt"
+	file="./.cpp_file_manager/RepositoryName.txt"
 	while IFS= read -r line
 	do
 	       #stores the data into the variable
@@ -21,10 +21,10 @@ cd ~
 		if [ $Response == "file" ]
 		then
 			#finds the required file by runing the findFile script	
-				bash ~/cpp_file_manager/findFile.sh
+				bash ~/.cpp_file_manager/findFile.sh
 			#FileName
 				# gets the temp name file's path
-					file="./cpp_file_manager/FileName.txt"
+					file="./.cpp_file_manager/FileName.txt"
 				#reads and stores the value in a variable
 					while IFS= read -r line
 					do
@@ -33,7 +33,7 @@ cd ~
 					done <"$file"
 
 			#gets the temp name file's path
-					file="./cpp_file_manager/FolderName.txt"
+					file="./.cpp_file_manager/FolderName.txt"
 				#reads and stores the value in a variable
 					while IFS= read -r line
 					do
@@ -54,13 +54,13 @@ cd ~
 	#bad response
 		else
 			echo "Invalid Response. Try again"
-			bash ~/cpp_file_manager/transferFiles.sh
+			bash ~/.cpp_file_manager/transferFiles.sh
 		fi
 
 #Copies the files to the gitHub clone
-	DESTINATION="./CS_141_GitHub/$RepositoryName"
+	DESTINATION="./.CS_141_GitHub/$RepositoryName"
 	cp -r "$SOURCE"* "$DESTINATION"
 
 #Deletes the temporary files
-	rm ~/cpp_file_manager/FolderName.txt
-	rm ~/cpp_file_manager/FileName.txt
+	rm ~/.cpp_file_manager/FolderName.txt
+	rm ~/.cpp_file_manager/FileName.txt

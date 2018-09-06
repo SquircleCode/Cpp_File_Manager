@@ -4,7 +4,7 @@
 cd ~
 #RepositoryPath
 	# gets the temp name file's path
-		file="./cpp_file_manager/GitHub_repository.txt"
+		file="./.cpp_file_manager/GitHub_repository.txt"
 	#reads and stores the value in a variable
 		while IFS= read -r line
 		do
@@ -14,7 +14,7 @@ cd ~
 
 #RepositoryName
 	# gets the temp name file's path
-		file="./cpp_file_manager/RepositoryName.txt"
+		file="./.cpp_file_manager/RepositoryName.txt"
 	#reads and stores the value in a variable
 		while IFS= read -r line
 		do
@@ -24,10 +24,10 @@ cd ~
 
 
 #Uploads the file to github
-	cd ~/CS_141_GitHub/$RepositoryName
+	cd ~/.CS_141_GitHub/$RepositoryName
 	git init
 	git add .
-	git commit -m "Uploaded using cpp_file_manager. Created by SaiKrishna"
+	git commit -m "Uploaded using .cpp_file_manager. Created by SaiKrishna"
 	git remote add origin #RepositoryPath
 	git push -u origin master
 

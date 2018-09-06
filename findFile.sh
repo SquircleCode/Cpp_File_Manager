@@ -12,7 +12,7 @@ FolderName="lab$LAB_NO"
 FileName="lab$LAB_NO""_q$Q_NO"
 
 # saves the details in text files for usage by other scripts
-echo $FileName >> ~/cpp_file_manager/FileName.txt
+echo $FileName >> ~/.cpp_file_manager/FileName.txt
 echo $FolderName >> ~/cpp_file_manager/FolderName.txt
 
 # checks if the folder does not exist
