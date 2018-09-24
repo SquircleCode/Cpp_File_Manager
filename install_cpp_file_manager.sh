@@ -56,16 +56,11 @@ cd ~
 		sleep 3
 		echo "Thanks for using Cpp File Manager"
 		#deletes the installation file
-		rm $pwd	
+		cd $pwd		
+		rm ../Cpp_File_Manager-1.0.1.zip
+		cd ~
+		rm -rf $pwd
 	else
 		echo "ERROR - FILES MISSING: Please Download all the files. Refer Readme."
 		echo "Thanks for trying to use Cpp File Manager"
-	fi
-
-
-	
-
-			
-		
-	
-
+fi
