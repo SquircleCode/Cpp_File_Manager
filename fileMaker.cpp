@@ -8,7 +8,7 @@
 
 using namespace std;
 
-// Main Method
+// Main Function
 int main(){
 	// To-Do
 
